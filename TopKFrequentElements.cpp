@@ -21,4 +21,6 @@ int main(){
         ans.push_back(v[i].second);
     }
     // return ans;
+
+    //using a frequency map we get the most frequent elements then sort the map in a vector using pairs
 }

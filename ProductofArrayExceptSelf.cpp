@@ -18,4 +18,8 @@ int main(){
     }
     ans.push_back(ppa[nums.size()-2]);
     // return ans;
+
+    // this solution utilizes a prefix product and suffix produdct array
+    // by taking the product of all elements before and all elements after a specific element,
+    // we can get the product of all elements without that specific element using ppa and spa.
 }
