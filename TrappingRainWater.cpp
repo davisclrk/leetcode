@@ -36,5 +36,5 @@ int main(){
     }
     return ans;
 
-    // this solution uses two pointers going from both ends to the highest height in the array to calculate the amount of water
+    // this solution uses a linear search (one from each end) to the highest height in the array to calculate the amount of water trapped
 }
