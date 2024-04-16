@@ -33,3 +33,5 @@ void func(string p){
     func(p+'(');
     func(p+')');
 }
+
+// this solution brute force generates all possible combinations of parentheses and then checks them using a stack
