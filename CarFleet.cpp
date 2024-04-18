@@ -40,4 +40,5 @@ int main() {
     // this solution uses a dsu to keep track of what cars are together in fleets and uses mathetical logic to determine if they will meet in a fleet or not
     // by subtracting the target position from the current position and dividing by the speed we get the time it will take to reach the target
     // by doing this we can tell what cars will get to the target faster than others and thus will join into a fleet
+    // this could also be done with a monotonic stack where you add the cars to the stack and pop them if they are faster than the car at the top, then return the size of the stack
 }
