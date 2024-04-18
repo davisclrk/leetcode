@@ -37,6 +37,7 @@ int main() {
     for (int i=0;i<position.size();i++) s.insert(find(i));
     // return s.size();
 
-    // initially i thought this solution didnt cover all cases cause what if the one behind has a higher rate but the one in front reaches the end already? somehow it did worked tho but it would prob be easy to add a check for this
     // this solution uses a dsu to keep track of what cars are together in fleets and uses mathetical logic to determine if they will meet in a fleet or not
+    // by subtracting the target position from the current position and dividing by the speed we get the time it will take to reach the target
+    // by doing this we can tell what cars will get to the target faster than others and thus will join into a fleet
 }
