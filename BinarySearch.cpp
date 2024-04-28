@@ -17,4 +17,5 @@ int main(){
 
     // basic binary search template code
     // returns -1 if element is not found and loop is broken
+    
 }
