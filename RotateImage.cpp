@@ -18,4 +18,5 @@ int main(){
     // then we reverse each row to get the final rotated matrix
     // this is a 90 degree clockwise rotation
     // for 90 degree counter-clockwise rotation, reverse each column instead
+    // can also reverse every row then transpose for 90 degree counter-clockwise rotation
 }
