@@ -25,3 +25,19 @@ int main(){
     if (s1 == s2) return true;
     else return false;
 }
+
+// alternatively if want to avoid if statements, just swap on spot:
+
+// for (int i=0;i<s1.length();i++){
+//     if (s1[i] != s2[i]){
+//         if (index1 == -1) index1 = i;
+//         else if (index2 == -1) {
+//             index2 = i;
+//             swap(s1[index1], s1[index2]);
+//         }
+//         else return false;
+//     }
+// }
+
+// if (s1 == s2) return true;
+// else return false;
