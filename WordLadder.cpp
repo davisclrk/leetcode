@@ -18,34 +18,19 @@ int main(){
     memset(dis, 0, sizeof(dis));
     unordered_map<string, int> mp;
     mp[beginWord] = 0;
-    bool endWordInWordList = false;
+    bool endWordInWordList = false, beginWordInWordList = false;
     for (int i=0;i<wordList.size();i++){
-        if (wordList[i] == beginWord) continue;
+        if (wordList[i] == beginWord) {
+            beginWordInWordList = true;
+            continue;
+        }
         mp[wordList[i]] = i+1;
         if (wordList[i] == endWord) endWordInWordList = true;
     }
     if (!endWordInWordList) return 0;
-    for (int j=0;j<wordList.size();j++){
-        if (wordList[j] == beginWord) continue;
-        bool diff = false, good = true;
-        for (int k=0;k<beginWord.length();k++){
-            if (beginWord[k] != wordList[j][k]){
-                if (diff){
-                    good = false;
-                    break;
-                }
-                diff = true;
-            }
-        }
-        if (good){
-            adj[mp[beginWord]].push_back(mp[wordList[j]]);
-            adj[mp[wordList[j]]].push_back(mp[beginWord]);
-        }
-    }
+    if (!beginWordInWordList) wordList.push_back(beginWord);
     for (int i=0;i<wordList.size();i++){
-        if (wordList[i] == beginWord) continue;
         for (int j=i+1;j<wordList.size();j++){
-            if (wordList[j] == beginWord) continue;
             bool diff = false, good = true;
             for (int k=0;k<beginWord.length();k++){
                 if (wordList[i][k] != wordList[j][k]){
