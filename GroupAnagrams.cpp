@@ -21,3 +21,26 @@ int main(){
     }
     // return ans;
 }
+
+// thats a lazy solution ^^
+// better:
+
+class Solution {
+public:
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        vector<vector<string>> ans;
+        map<vector<int>, vector<string>> mp;
+
+        for (auto i:strs){
+            vector<int> freq(26,0);
+            for (char j:i) freq[int(j)-97]++;
+            mp[freq].push_back(i);
+        }
+
+        for (auto &i:mp) ans.push_back(i.second);
+
+        return ans;
+    }
+};
+
+// create frequency vector for each word which also serves as the key in the hashmap
